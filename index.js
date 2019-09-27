@@ -1,15 +1,16 @@
 const express = require('express');
 const app = express();
 
-const movieType =
+//Lets create const data and use it for now 
+const listMovieTypes =
 [
-    {id:1,typeName:'Action'},
-    {id:2,typeName:'Romance'},
-    {id:3,typeName:'Horror'}
+    {id:1,movieType:'Action'},
+    {id:2,movieType:'Romance'},
+    {id:3,movieType:'Horror'}
 ];
 
 app.get('/', (req,res) =>{
-    res.send([movieType]);
+    res.send([listMovieTypes]);
 });
 
 app.listen(5000);
